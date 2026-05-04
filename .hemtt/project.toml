@@ -1,0 +1,10 @@
+name = "62nd STB Armory"
+author = "62nd STB S-4 Team"
+prefix = "62STB"
+mainprefix = "z"
+
+[version]
+major = 0
+minor = 1
+patch = 0
+build = 1
