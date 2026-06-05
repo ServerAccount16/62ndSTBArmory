@@ -1,1 +1,2 @@
 respawnOnStart = -1;
+respawnTemplates[] = {};
