@@ -1,2 +1,5 @@
-respawnOnStart = -1;
+briefing = 0;
+debriefing = 0;
+respawn = 0;
+respawnOnStart = 0;
 respawnTemplates[] = {};
