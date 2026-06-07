@@ -193,3 +193,5 @@ class CfgVehicles
       crewExplosionProtection = 0.65;
    };
 };
+
+*test*
