@@ -21,7 +21,8 @@ class CfgPatches
          "OPTRE_ACE_Compat",
          "DMNS_Vehicles_M511_Springbok",
          "DMNS_Vehicles_M808B",
-         "DMNS_Armour"
+         "DMNS_Armour",
+         "QAV_Merkava"
       };
    };
 };
@@ -127,6 +128,30 @@ class CfgVehicles
       armor = 855;              // Elephant: 6 HEAT; tested 8/8 at 1140
       armorStructural = 4;
       damageResistance = 0.01;
+      crewExplosionProtection = 0.65;
+   };
+
+   class qav_merkava_base: B_MBT_01_cannon_F
+   {
+      armor = 570;              // Merkava: 3 HEAT
+      armorStructural = 3.25;
+      damageResistance = 0.0055;
+      crewExplosionProtection = 0.65;
+   };
+
+   class qav_merkava_mk2D: qav_merkava_base
+   {
+      armor = 570;              // Merkava: 3 HEAT
+      armorStructural = 3.25;
+      damageResistance = 0.0055;
+      crewExplosionProtection = 0.65;
+   };
+
+   class qav_merkava_mk3b: qav_merkava_base
+   {
+      armor = 570;              // Merkava: 3 HEAT
+      armorStructural = 3.25;
+      damageResistance = 0.0055;
       crewExplosionProtection = 0.65;
    };
 
