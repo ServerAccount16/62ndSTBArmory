@@ -1,0 +1,75 @@
+#include "..\script_component.hpp"
+/*
+ * Author: flufflesamy
+ * Creates a vehicle on a marker.
+ *
+ * Arguments:
+ * 0: Vehicle Class Name <STRING>
+ * 1: Name of Marker <STRING>
+ * 2: Vehicle Console Entity <OBJECT>
+ * 3: Caller <OBJECT>
+ *
+ * Return Value:
+ * 0: Vehicle <OBJECT>
+ *
+ * Example:
+ * ["OPTRE_FC_Wraith_Tan", "myMkr", vehicleConsole, nil] call afl_misc_fnc_createVehOnMarker
+ *
+ * Public: No
+ */
+
+params ["_vehName", "_markerName", "_entity", "_caller"];
+TRACE_4("createVehOnMarker",_vehName,_markerName,_entity,_caller);
+
+private _pos = getMarkerPos[_markerName, true];
+
+private _mkrVarName = format ["%1_%2", QUOTE(ADDON), _markerName];
+private _veh = _entity getVariable [_mkrVarName, objNull];
+
+// If vehicle is already spawned, remove it
+if (!isNull _veh) then
+{
+	deleteVehicle _veh;
+	_entity setVariable [_mkrVarName, nil, true];
+	TRACE_2("_veh exists, deleting old vehicle",_veh,_entity);
+};
+
+_veh = createVehicle[_vehName, _pos, [], 0, "CAN_COLLIDE"];
+_veh setVariable ["BIS_enableRandomization", false];
+
+if (_caller == player) then
+{
+	hint format ["Spawned %1 at %2.", _vehName, _markerName];
+};
+
+
+// sets variable in console for name of marker
+_entity setVariable [_mkrVarName, _veh, true];
+
+private _id = [_veh, "Dammaged", {
+	params ["_unit", "_hitSelection", "_damage", "_hitPartIndex", "_hitPoint", "_shooter", "_projectile"];
+	thisArgs params ["_mkrVarName", "_entity", "_caller"];
+
+	if (_caller == player) then
+	{
+        hintSilent "";
+		hint format ["Dealt %1 damage to %2!", _damage, _hitPoint];
+	};
+
+	if (_unit call FUNC(isDestroyed)) then
+	{
+		if (_caller == player) then{
+            hintSilent "";
+			hint "Vehicle Destroyed!";
+		};
+
+		[{
+			params ["_unit", "_thisID", "_mkrVarName"];
+			deleteVehicle _unit select 0;
+			_entity setVariable [_mkrVarName, nil, true];
+			_unit removeEventHandler ["Dammaged", _thisID];
+		}, [_unit, _thisID, _mkrVarName, _entity], 5] call CFUNC(waitAndExecute);
+	};
+}, [_mkrVarName, _entity, _caller]] call CFUNC(addBISEventHandler);
+
+_veh // Return

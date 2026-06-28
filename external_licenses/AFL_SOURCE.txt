@@ -1,0 +1,12 @@
+Repository: https://github.com/flufflesamy/AFL
+Imported commit: 2cae566d4fe092a6c2e5c32099385a64b2ce60ac
+
+Imported addons:
+- main
+- medicalsim
+- misc
+- missions
+- statusmonitor
+
+Excluded addons:
+- medical
