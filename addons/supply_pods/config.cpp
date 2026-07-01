@@ -1,7 +1,5 @@
 #include "config_macros.hpp"
 
-#include "config_macros.hpp"
-
 class CfgPatches {
   class SFT_supply_pods {
     units[] = {
