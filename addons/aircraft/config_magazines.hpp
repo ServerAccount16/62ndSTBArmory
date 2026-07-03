@@ -1,3 +1,5 @@
+/*
+Same with weapons.
 class cfgMagazines
 {
   class 60Rnd_40mm_GPR_Tracer_Red_shells;
@@ -69,3 +71,4 @@ class cfgMagazines
   };
 
 };
+*/

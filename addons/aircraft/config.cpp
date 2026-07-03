@@ -4,10 +4,12 @@
 #include "config_ammo.hpp"
 #include "HMD.hpp"
 
+// A majority of the code in this file was created my Waylen, and is used with permission. Originally this code was found in the SFT mod.
+
 class CfgPatches {
-  class SFT_aircraft {
+  class 62nd_aircraft {
     units[] = {
-      "SFT_MH144_S_Falcon", "SFT_AH144_Falcon", "SFT_UH144_M_Falcon", "SFT_AV14_Hornet"
+      "62nd_MH144_S_Falcon", "62nd_AH144_Falcon", "62nd_UH144_M_Falcon", "62nd_AV14_Hornet"
     };
     requiredVersion = 0.1;
     requiredAddons[] = {
@@ -38,19 +40,17 @@ class CfgVehicles
   };
 
   /// MH144 ///
-  class SFT_MH144_S_Falcon : OPTRE_UNSC_MH_144S_Falcon
+  class 62nd_MH144_S_Falcon : OPTRE_UNSC_MH_144S_Falcon
   {
     author = "Weber";
-    displayName = "[SFT] MH-144S 'Falcon' [Transport]";
+    displayName = "[62nd] MH-144S 'Falcon' [Transport]";
     weapons[] = 
     {
-      "gatling_20mm",
       "CMFlareLauncher",
       "Laserdesignator_pilotCamera"
     };
     magazines[] = 
     {
-      "1000Rnd_20mm_shells",
       "168Rnd_CMFlare_Chaff_Magazine",
       "168Rnd_CMFlare_Chaff_Magazine",
       "Laserbatteries"
@@ -73,7 +73,7 @@ class CfgVehicles
       };
     };
 
-
+    /* Commenting incase we want to edit it later but for now it can stay base
     class Turrets : Turrets
     {
       class LeftDoorGun  : LeftDoorGun
@@ -94,7 +94,7 @@ class CfgVehicles
       class CargoTurret_06 : CargoTurret_06{};
       class CargoTurret_07 : CargoTurret_07{};
     };
-
+    */
     class ViewPilot: ViewPilot
     {
       initAngleX = 0;
@@ -142,19 +142,17 @@ class CfgVehicles
     class ViewPilot;
   };
 
-  class SFT_AH144_Falcon : OPTRE_UNSC_falcon_armed
+  class 62nd_AH144_Falcon : OPTRE_UNSC_falcon_armed
   {
     author = "Weber";
-    displayName = "[SFT] AH-144 'Falcon' [DAP]";
+    displayName = "[62nd] AH-144 'Falcon' [DAP]";
     weapons[] = 
     {
-      "gatling_20mm",
       "CMFlareLauncher",
       "Laserdesignator_pilotCamera"
     };
     magazines[] = 
     {
-      "1000Rnd_20mm_shells",
       "168Rnd_CMFlare_Chaff_Magazine",
       "168Rnd_CMFlare_Chaff_Magazine",
       "Laserbatteries"
@@ -198,43 +196,6 @@ class CfgVehicles
 
     PILOTCAMERA_FALCON
 
-    class Components: Components
-    {
-      class TransportPylonsComponent: TransportPylonsComponent
-      {
-        class pylons
-        {
-          class WingPylonRight
-          {
-            attachment = "SFT_16rnd_Anvil1_HE";
-            hardpoints [] = 
-            {
-              "OPAEX_Hardpoint_UH144",
-              "SFT_Anvil"
-            };          
-            bay=-1;
-						priority = 4; 
-            // UI position values simplified
-            UIposition[]={0.35,0.1};
-						turret[]={};
-          };
-          class WingPylonLeft: WingPylonRight
-          {
-            attachment = "SFT_16rnd_Anvil1_HE";
-            hardpoints [] = 
-            {
-              "OPAEX_Hardpoint_UH144",
-              "SFT_Anvil"
-            };
-            priority = 5;
-						mirroredMissilePos=1;
-            // UI position values simplified
-            UIposition[]={0.35,0.467};
-          };
-        };
-      };  
-    }; 
-
 		#include "\z\62stb\addons\aircraft\hmds\cfg_HMD_AH64D_106_Pilot_Lynx_A.hpp"
 		// ^^^ HMD script
 
@@ -255,10 +216,10 @@ class CfgVehicles
 
   // set up inheritance for ViewPilot and UserActions classes
 
-  class SFT_UH144_M_Falcon : OPTRE_UNSC_falcon_medical
+  class 62nd_UH144_M_Falcon : OPTRE_UNSC_falcon_medical
   {
     author = "Weber";
-    displayName = "[SFT] UH-144M 'Falcon' [Medevac]";
+    displayName = "[62nd] UH-144M 'Falcon' [Medevac]";
     //FALCON_HIDDENSELECTIONSTEXTURES_MEDICAL
 
     //class ViewPilot: ViewPilot
@@ -283,22 +244,19 @@ class CfgVehicles
     class TransportPylonsComponent;
     class ViewPilot;
   };
-  class SFT_AV14_Hornet: OPTRE_UNSC_hornet_CAP
+  class 62nd_AV14_Hornet: OPTRE_UNSC_hornet_CAP
   {
     author = "Weber";
-    displayName = "[SFT] AV-14 Hornet";
+    displayName = "[62nd] AV-14 Hornet";
 
 		weapons[]=
 		{
-			"SFT_GAU23A",
 			"CMFlareLauncher",
 			"Laserdesignator_pilotCamera",
 			"OPTRE_missiles_C2GMLS"
 		};
 		magazines[]=
 		{
-			"SFT_2000rnd_20mm",
-			"SFT_2000rnd_20mm",
 			"168Rnd_CMFlare_Chaff_Magazine",
 			"168Rnd_CMFlare_Chaff_Magazine",
 			"Laserbatteries",
@@ -340,43 +298,6 @@ class CfgVehicles
     };
 
     PILOTCAMERA_HORNET
-
-    class Components: Components
-    {
-      class TransportPylonsComponent: TransportPylonsComponent
-      {
-        class pylons
-        {
-          class pylons1
-          {
-            attachment = "OPTRE_missiles_C2GMLS";
-            hardpoints [] = 
-            {
-              "OPAEX_Hardpoint_AV14",
-              "SFT_Anvil"
-            };          
-            bay=-1;
-						priority = 5; 
-            // UI position values simplified
-            UIposition[]={0.35,0.1};
-						turret[]={};
-          };
-          class pylons2: pylons1
-          {
-            attachment = "OPTRE_missiles_C2GMLS";
-            hardpoints [] = 
-            {
-              "OPAEX_Hardpoint_AV14",
-              "SFT_Anvil"
-            };
-            priority = 4;
-						mirroredMissilePos=1;
-            // UI position values simplified
-            UIposition[]={0.35,0.467};
-          };
-        };
-      };  
-    }; 
 
 		#include "\z\62stb\addons\aircraft\hmds\cfg_HMD_AH64D_106_Pilot_Lynx_A.hpp"
 		// ^^^ HMD script

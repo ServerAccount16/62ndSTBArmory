@@ -1,3 +1,6 @@
+/*
+  Same with weapons.
+
 class CfgAmmo
 {
 
@@ -87,3 +90,4 @@ class CfgAmmo
    };
 
 };
+*/
