@@ -2,9 +2,7 @@
 
 class CfgPatches {
   class 62nd_supply_pods {
-    units[] = {
-      ""
-    };
+    units[] = {};
     requiredVersion = 0.1;
   };
 };

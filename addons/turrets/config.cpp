@@ -51,7 +51,6 @@ class CfgPatches {
       "62nd_Static_Gauss",
       "62nd_Static_ATGM",
       "62nd_Static_AA",
-      "62nd_Static_Base_Turret", // If you plan on referencing a custom base
       "62nd_Static_M41_Ins",
       "62nd_Static_AA_Ins",
       "62nd_Static_ATGM_Ins",
