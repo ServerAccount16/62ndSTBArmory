@@ -1,7 +1,7 @@
 #include "config_macros.hpp"
 
 class CfgPatches {
-  class SFT_supply_pods {
+  class 62nd_supply_pods {
     units[] = {
       ""
     };
@@ -12,16 +12,16 @@ class CfgPatches {
 class CfgVehicles
 {
   class OPTRE_Ammo_SupplyPod_Empty;
-  class SFT_sp_empty: OPTRE_Ammo_SupplyPod_Empty
+  class 62nd_sp_empty: OPTRE_Ammo_SupplyPod_Empty
   {
     author = "Weber";
     scope = 2;
     scopeCurator = 2;
     scopeArsenal = 2;
-    displayName = "[SFT] Supply Pod (Empty)";
-    faction = "SFT";
-    editorCategory = "SFT";
-    editorSubcategory = "SFT_supplies";
+    displayName = "[62nd] Supply Pod (Empty)";
+    faction = "62nd";
+    editorCategory = "62nd";
+    editorSubcategory = "62nd_supplies";
     transportMaxWeapons = 25;
     transportMaxMagazines = 100;
     hiddenSelections[] = {"camo"};
@@ -37,9 +37,9 @@ class CfgVehicles
   // ---------------------------------------------------------------------------
   //  Medical Supply Pod
   // ---------------------------------------------------------------------------
-  class SFT_sp_medical: SFT_sp_empty 
+  class 62nd_sp_medical: 62nd_sp_empty 
   {
-    displayName = "[SFT] Supply Pod (Medical)";
+    displayName = "[62nd] Supply Pod (Medical)";
     /*hiddenSelectionsTextures[] = 
     {
       ""
@@ -79,9 +79,9 @@ class CfgVehicles
   // ---------------------------------------------------------------------------
   //  Explosives Supply Pod
   // ---------------------------------------------------------------------------
-  class SFT_sp_ex: SFT_sp_empty 
+  class 62nd_sp_ex: 62nd_sp_empty 
   {
-    displayName = "[SFT] Supply Pod (Explosives)";
+    displayName = "[62nd] Supply Pod (Explosives)";
     /*hiddenSelectionsTextures[] = {
       ""
     };*/
@@ -125,9 +125,9 @@ class CfgVehicles
   // ---------------------------------------------------------------------------
   //  Launcher Supply Pod
   // ---------------------------------------------------------------------------
-  class SFT_sp_at: SFT_sp_empty 
+  class 62nd_sp_at: 62nd_sp_empty 
   {
-    displayName = "[SFT] Supply Pod (Launchers)";
+    displayName = "[62nd] Supply Pod (Launchers)";
     /*hiddenSelectionsTextures[] = 
     {
       ""
@@ -135,13 +135,6 @@ class CfgVehicles
     class TransportMagazines 
     {
       class _xx_OPTRE_M41_Twin_HEAT_SACLOS { magazine = "OPTRE_M41_Twin_HEAT_SACLOS"; count = 4; };
-      class _xx_OPTRE_M41_Twin_HEAT_SALH { magazine = "OPTRE_M41_Twin_HEAT_SALH"; count = 4; };
-      class _xx_OPTRE_M41_Twin_HEAT_Thermal { magazine = "OPTRE_M41_Twin_HEAT_Thermal"; count = 4; };
-      class _xx_TCF_2Rnd_50x137_SALH { magazine = "TCF_2Rnd_50x137_SALH"; count = 4; };
-      class _xx_TCF_2Rnd_50x137_AA { magazine = "TCF_2Rnd_50x137_AA"; count = 4; };
-      class _xx_TCF_2Rnd_50x137_PEN { magazine = "TCF_2Rnd_50x137_PEN"; count = 4; };
-      class _xx_TCF_2Rnd_50x137_THERMO { magazine = "TCF_2Rnd_50x137_THERMO"; count = 4; };
-      class _xx_TCF_2Rnd_50x137_SACLOS { magazine = "TCF_2Rnd_50x137_SACLOS"; count = 4; };
     };
     class TransportWeapons 
     {
@@ -153,22 +146,16 @@ class CfgVehicles
   // ---------------------------------------------------------------------------
   //  Rifle Ammo Supply Pod
   // ---------------------------------------------------------------------------
-  class SFT_sp_rifle: SFT_sp_empty 
+  class 62nd_sp_rifle: 62nd_sp_empty 
   {
-    displayName = "[SFT] Supply Pod (Rifle Ammo)";
+    displayName = "[62nd] Supply Pod (Rifle Ammo)";
     /*hiddenSelectionsTextures[] = 
     {
       ""
     };*/
     class TransportMagazines 
     {
-      class _xx_OPTRE_32Rnd_762x51_Mag { magazine = "OPTRE_32Rnd_762x51_Mag"; count = 75; };
-      class _xx_OPTRE_32Rnd_762x51_Mag_Tracer { magazine = "OPTRE_32Rnd_762x51_Mag_Tracer"; count = 75; };
-      class _xx_OPTRE_36Rnd_95x40_Mag { magazine = "OPTRE_36Rnd_95x40_Mag"; count = 25; };
-      class _xx_OPTRE_36Rnd_95x40_Mag_Tracer { magazine = "OPTRE_36Rnd_95x40_Mag_Tracer"; count = 25; };
-      class _xx_OPTRE_60Rnd_5x23mm_Mag { magazine = "OPTRE_60Rnd_5x23mm_Mag"; count = 25; };
       class _xx_12Rnd_8Gauge { magazine = "12Rnd_8Gauge"; count = 25; };
-      class _xx_OPTRE_4Rnd_145x114_APFSDS_Mag { magazine = "OPTRE_4Rnd_145x114_APFSDS_Mag"; count = 10; };
     };
     class TransportWeapons {};
     class TransportItems {};
@@ -177,19 +164,14 @@ class CfgVehicles
   // ---------------------------------------------------------------------------
   //  MG Ammo Supply Pod
   // ---------------------------------------------------------------------------
-  class SFT_sp_mg: SFT_sp_empty {
-    displayName = "[SFT] Supply Pod (MG Ammo)";
+  class 62nd_sp_mg: 62nd_sp_empty {
+    displayName = "[62nd] Supply Pod (MG Ammo)";
     /*hiddenSelectionsTextures[] = 
     {
       ""
     };*/
     class TransportMagazines 
     {
-      class _xx_twelfth_95x40_100rnd { magazine = "twelfth_95x40_100rnd"; count = 10; };
-      class _xx_twelfth_95x40_100rnd_T { magazine = "twelfth_95x40_100rnd_T"; count = 10; };
-      class _xx_twelfth_762x51_200rnd { magazine = "twelfth_762x51_200rnd"; count = 10; };
-      class _xx_twelfth_762x51_200rnd_T { magazine = "twelfth_762x51_200rnd_T"; count = 10; };
-      class _xx_twelfth_762x51_400rnd_T { magazine = "OPTRE_400Rnd_762x51_Box_Tracer"; count = 5; };
       class _xx_ACE_SpareBarrel { magazine = "ACE_SpareBarrel"; count = 5; };
     };
     class TransportWeapons {};
@@ -202,8 +184,8 @@ class CfgVehicles
   // ---------------------------------------------------------------------------
   //  Equipment Supply Pod
   // ---------------------------------------------------------------------------
-  class SFT_sp_eq: SFT_sp_empty {
-    displayName = "[SFT] Supply Pod (Equipment)";
+  class 62nd_sp_eq: 62nd_sp_empty {
+    displayName = "[62nd] Supply Pod (Equipment)";
     /*hiddenSelectionsTextures[] = {
       ""
     };*/
@@ -217,11 +199,6 @@ class CfgVehicles
       class _xx_ItemcTab { name = "ItemcTab"; count = 10; };
       class _xx_ItemAndroid { name = "ItemAndroid"; count = 10; };
       class _xx_ItemMicroDAGR { name = "ItemMicroDAGR"; count = 10; };
-      class _xx_ACRE_PRC343 { name = "ACRE_PRC343"; count = 10; };
-      class _xx_ACRE_PRC148 { name = "ACRE_PRC148"; count = 10; };
-      class _xx_ACRE_PRC117F { name = "ACRE_PRC117F"; count = 2; };
-      class _xx_ACRE_VHF30108SPIKE { name = "ACRE_VHF30108SPIKE"; count = 2; };
-      class _xx_ACRE_VHF30108MAST { name = "ACRE_VHF30108MAST"; count = 2; };
       class _xx_Laserbatteries { name = "Laserbatteries"; count = 2; };
     };
   };
@@ -268,13 +245,13 @@ class CfgVehicles
           class n18 { name = "M37GL Supply Pod"; value = "OPTRE_Ammo_SupplyPod_37_GL"; };
           class n19 { name = "MA5BGL Supply Pod"; value = "OPTRE_Ammo_SupplyPod_AR_GL"; };
           class n20 { name = "CUSTOM Supply Pod"; value = "OPTRE_Ammo_SupplyPod_Empty"; };
-          class n21 { name = "[SFT] Medical Supply Pod"; value = "SFT_sp_medical"; };
-          class n23 { name = "[SFT] Explosives Supply Pod"; value = "SFT_sp_ex"; };
-          class n25 { name = "[SFT] Launcher Supply Pod"; value = "SFT_sp_at"; };
-          class n26 { name = "[SFT] Mortar Supply Pod"; value = "SFT_sp_mortar"; };
-          class n27 { name = "[SFT] Rifle Supply Pod"; value = "SFT_sp_rifle"; };
-          class n28 { name = "[SFT] Machine Gun Supply Pod"; value = "SFT_sp_mg"; };
-          class n29 { name = "[SFT] Equipment Supply Pod"; value = "SFT_sp_eq"; };
+          class n21 { name = "[62nd] Medical Supply Pod"; value = "62nd_sp_medical"; };
+          class n23 { name = "[62nd] Explosives Supply Pod"; value = "62nd_sp_ex"; };
+          class n25 { name = "[62nd] Launcher Supply Pod"; value = "62nd_sp_at"; };
+          class n26 { name = "[62nd] Mortar Supply Pod"; value = "62nd_sp_mortar"; };
+          class n27 { name = "[62nd] Rifle Supply Pod"; value = "62nd_sp_rifle"; };
+          class n28 { name = "[62nd] Machine Gun Supply Pod"; value = "62nd_sp_mg"; };
+          class n29 { name = "[62nd] Equipment Supply Pod"; value = "62nd_sp_eq"; };
         };
       };
     };
