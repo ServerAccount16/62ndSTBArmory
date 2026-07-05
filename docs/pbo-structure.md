@@ -23,6 +23,8 @@ family for now.
 - `62stb_compat_ace_arsenal`: ACE Arsenal main-menu mission redirect.
 - `62stb_compat_tcp_arsenal`: TCP menu hook that reuses the arsenal redirect.
 - `62stb_compat_tcp_weapons`: TCP weapon/magazine-well compatibility only.
+- `62stb_compat_lambs_rpg`: LAMBS RPG-style AI launcher behavior for TCP
+  M41 and DMNS M96 launchers.
 
 ## Balance
 
