@@ -1,74 +1,49 @@
-/*
-Same with weapons.
-class cfgMagazines
+class CfgMagazines
 {
-  class 60Rnd_40mm_GPR_Tracer_Red_shells;
-  class SFT_60Rnd_40mm_HE : 60Rnd_40mm_GPR_Tracer_Red_shells
+  class OPTRE_8Rnd_Anvil1_missiles;
+  class STB_8Rnd_Anvil1_Vanilla_HE: OPTRE_8Rnd_Anvil1_missiles
   {
     author = "Weber";
-    displayName = "[SFT] 60Rnd 40mm SAPHE";
-    displayNameShort = "40mm SAPHE";
-    count = 60;
-    mass = 100;
-    tracersEvery=3;
-    ammo = "SFT_40mmHE";
+    displayName = "[62nd] 8x 'ANVIL I' HE Rockets";
+    displayNameShort = "ANVIL HE";
+    displayNameMFDFormat = "ANVIL";
+    descriptionShort = "8x ANVIL I rockets with vanilla HE damage";
+    pylonWeapon = "STB_Falcon_Anvil1_Launcher";
+    ammo = "STB_M_ANVIL_1_Vanilla_HE";
   };
 
-  class 40Rnd_40mm_APFSDS_Tracer_Red_shells;
-  class SFT_60Rnd_40mm_AP : 40Rnd_40mm_APFSDS_Tracer_Red_shells
+  class OPTRE_16Rnd_Anvil1_missiles;
+  class STB_16Rnd_Anvil1_Vanilla_HE: OPTRE_16Rnd_Anvil1_missiles
   {
     author = "Weber";
-    displayName = "[SFT] 60Rnd 40mm APFSDS";
-    displayNameShort = "40mm APFSDS";
-    count = 60;
-    mass = 100;
-    tracersEvery=3;
-    ammo = "SFT_40mmAP";
+    displayName = "[62nd] 16x 'ANVIL I' HE Rockets";
+    displayNameShort = "ANVIL HE";
+    displayNameMFDFormat = "ANVIL";
+    descriptionShort = "16x ANVIL I rockets with vanilla HE damage";
+    pylonWeapon = "STB_Falcon_Anvil1_Launcher";
+    ammo = "STB_M_ANVIL_1_Vanilla_HE";
   };
 
-  class OPTRE_2000Rnd_20mm_HEIAP;
-  class SFT_2000rnd_20mm: OPTRE_2000Rnd_20mm_HEIAP
+  class OPTRE_2000Rnd_20mm_HE_Pylon;
+  class STB_1000Rnd_20mm_HE_Pylon: OPTRE_2000Rnd_20mm_HE_Pylon
   {
-    ammo = "SFT_20mm_HEIAP";
+    author = "Weber";
+    displayName = "[62nd] 1000x 20mm HE";
+    displayNameShort = "20mm HE";
+    displayNameMFDFormat = "20mm HE";
+    descriptionShort = "20mm high explosive nose cannon ammunition";
+    pylonWeapon = "STB_Falcon_Nose_20mm";
+    ammo = "B_20mm_Tracer_Red";
+    count = 1000;
+    tracersEvery = 5;
   };
 
-  class 12Rnd_missiles;
-  class SFT_16rnd_Anvil1_HE: 12Rnd_missiles
+  class STB_1000Rnd_20mm_AP_Pylon: STB_1000Rnd_20mm_HE_Pylon
   {
-		scope	= 2;
-		displayName	= "'ANVIL I' HE Rocket Pod";
-		displayNameShort = "HE Rocket";
-    descriptionShort = "[SFT] Unguided 16x HE 'Anvil 1' Rocket Pod";
-
-		sound[] = {"A3\Sounds_F\weapons\Rockets\titan_2",1.25893,1,1000};
-		weaponSoundEffect	= "DefaultRifle";
-		soundFly[] = {"A3\Sounds_F\weapons\Rockets\rocket_fly_2",0.501187,1.3,400};
-		soundHit[] = {"",1.25893,1,1};
-		reloadSound[]	= {"",0.000316228,1,20};
-		nameSound	= "rockets";
-		
-		initSpeed	= 44;
-		maxLeadSpeed = 200;
-
-		pylonWeapon	= "SFT_Anvil_1";
-    ammo = "SFT_ammo_Anvil1_HE";
-    count = 16;
-    mirrorMissilesIndexes[] = { 1,2 };
-
-    hardpoints[] = 
-    {
-      "SFT_Anvil"
-    };
+    displayName = "[62nd] 1000x 20mm AP";
+    displayNameShort = "20mm AP";
+    displayNameMFDFormat = "20mm AP";
+    descriptionShort = "20mm armor piercing nose cannon ammunition";
+    ammo = "STB_B_20mm_AP";
   };
-
-  class SFT_16rnd_Anvil1_HEAT: SFT_16rnd_Anvil1_HE
-  {
-		displayName	= "'ANVIL I' HEAT Rocket Pod";
-		displayNameShort = "HEAT Rocket";
-    descriptionShort = "[SFT] Unguided 16x HEAT 'Anvil 1' Rocket Pod";
-
-    ammo = "SFT_ammo_Anvil1_HEAT";
-  };
-
 };
-*/
