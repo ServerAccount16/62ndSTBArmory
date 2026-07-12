@@ -90,7 +90,7 @@ class CfgVehicles
       SUPPLY_MAG(TCP_1Rnd_12Gauge_Shell_Pellets,20)
       SUPPLY_MAG(TCP_1Rnd_12Gauge_Shell_Slug,20)
       SUPPLY_MAG(TCP_12Rnd_127x30_46_Mag,15)
-      SUPPLY_MAG(12RndTCP_24Rnd_127x20_Mag_8Gauge,15)
+      SUPPLY_MAG(TCP_24Rnd_127x20_Mag,15)
       SUPPLY_MAG(TCP_60Rnd_5x23_Mag,10)
       SUPPLY_MAG(TCP_20Rnd_65x48_Mag,10)
       SUPPLY_MAG(TCP_32Rnd_762x51_Mag,40)

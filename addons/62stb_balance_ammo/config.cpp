@@ -7,7 +7,8 @@ class CfgPatches
       requiredAddons[] =
       {
          "STB_main",
-         "DMNS_Weapons_Ammo"
+         "DMNS_Weapons_Ammo",
+         "OPTRE_Weapons_MG"
       };
    };
 };
@@ -40,5 +41,10 @@ class CfgMagazines
    class DMNS_M96_HEAT: RPG32_HE_F
    {
       initSpeed = 200;
+   };
+   class OPTRE_200Rnd_762x51_M118_M247A1_Box;
+   class OPTRE_50Rnd_127x99_M250_Box : OPTRE_200Rnd_762x51_M118_M247A1_Box
+   {
+      mass = 66.14;            // 3 kg
    };
 };
