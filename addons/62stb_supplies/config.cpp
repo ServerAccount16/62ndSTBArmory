@@ -155,7 +155,6 @@ class CfgVehicles
           PELICAN_SUPPLY_VALUE(n21,"[62nd] Medical Supply Pod",62nd_sp_medical)
           PELICAN_SUPPLY_VALUE(n23,"[62nd] Explosives Supply Pod",62nd_sp_ex)
           PELICAN_SUPPLY_VALUE(n25,"[62nd] Launcher Supply Pod",62nd_sp_at)
-          PELICAN_SUPPLY_VALUE(n26,"[62nd] Mortar Supply Pod",62nd_sp_mortar)
           PELICAN_SUPPLY_VALUE(n27,"[62nd] Rifle Supply Pod",62nd_sp_m)
           PELICAN_SUPPLY_VALUE(n28,"[62nd] Machine Gun Supply Pod",62nd_sp_hm)
           PELICAN_SUPPLY_VALUE(n29,"[62nd] Equipment Supply Pod",62nd_sp_eq)
